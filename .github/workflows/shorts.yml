@@ -1,1 +1,15 @@
+name: Shorts Autopilot
 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 15 * * *"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check autopilot
+        run: |
+          echo "Shorts autopilot is running!"
+          date -u
